@@ -14,6 +14,8 @@
 		73C6EC3E1BB49E1C00E7FFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C6EC3C1BB49E1C00E7FFEF /* LaunchScreen.storyboard */; };
 		73C6EC491BB49E1C00E7FFEF /* Ultimate_Math_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6EC481BB49E1C00E7FFEF /* Ultimate_Math_GameTests.swift */; };
 		73C6EC541BB49E1C00E7FFEF /* Ultimate_Math_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6EC531BB49E1C00E7FFEF /* Ultimate_Math_GameUITests.swift */; };
+		73C6EC681BB5CD4A00E7FFEF /* Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73C6EC661BB5CD4A00E7FFEF /* Right.mp3 */; settings = {ASSET_TAGS = (); }; };
+		73C6ECAA1BB5E33200E7FFEF /* Wrong1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73C6ECA91BB5E33200E7FFEF /* Wrong1.mp3 */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		73C6EC4F1BB49E1C00E7FFEF /* Ultimate Math GameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ultimate Math GameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C6EC531BB49E1C00E7FFEF /* Ultimate_Math_GameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Math_GameUITests.swift; sourceTree = "<group>"; };
 		73C6EC551BB49E1C00E7FFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73C6EC661BB5CD4A00E7FFEF /* Right.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Right.mp3; sourceTree = "<group>"; };
+		73C6ECA91BB5E33200E7FFEF /* Wrong1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong1.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				73C6EC3A1BB49E1C00E7FFEF /* Assets.xcassets */,
 				73C6EC3C1BB49E1C00E7FFEF /* LaunchScreen.storyboard */,
 				73C6EC3F1BB49E1C00E7FFEF /* Info.plist */,
+				73C6ECA91BB5E33200E7FFEF /* Wrong1.mp3 */,
+				73C6EC661BB5CD4A00E7FFEF /* Right.mp3 */,
 			);
 			path = "Ultimate Math Game";
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 			files = (
 				73C6EC3E1BB49E1C00E7FFEF /* LaunchScreen.storyboard in Resources */,
 				73C6EC3B1BB49E1C00E7FFEF /* Assets.xcassets in Resources */,
+				73C6EC681BB5CD4A00E7FFEF /* Right.mp3 in Resources */,
+				73C6ECAA1BB5E33200E7FFEF /* Wrong1.mp3 in Resources */,
 				73C6EC391BB49E1C00E7FFEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +489,7 @@
 				73C6EC5A1BB49E1C00E7FFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73C6EC5B1BB49E1C00E7FFEF /* Build configuration list for PBXNativeTarget "Ultimate Math GameTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +498,7 @@
 				73C6EC5D1BB49E1C00E7FFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73C6EC5E1BB49E1C00E7FFEF /* Build configuration list for PBXNativeTarget "Ultimate Math GameUITests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +507,7 @@
 				73C6EC601BB49E1C00E7FFEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

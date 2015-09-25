@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
     
     override func shouldAutorotate() -> Bool {
         return false
     }
+    
+    let wrongSoundURL = NSBundle.mainBundle().URLForResource("Wrong1", withExtension: "mp3")
+    
+    var myWrongSound: SystemSoundID = 0
+    
+    let rightSoundURL = NSBundle.mainBundle().URLForResource("Right", withExtension: "mp3")
+    
+    var myRightSound: SystemSoundID = 0
 
 
     @IBOutlet weak var lblCorrect: UILabel!
@@ -68,8 +77,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        randomizeTheMathGame()
         
-        randomizeTheMathGame()  
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -296,7 +306,7 @@ class ViewController: UIViewController {
         
         lblCorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        
+        playIncorrectSound()
         printCorrectIncorrect()
         
     }
@@ -330,17 +340,19 @@ class ViewController: UIViewController {
             
             correctIncorrect = "Are you cheating?"
         }
+        
     
         
-        lblCorrect.textColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        lblCorrect.textColor = UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
         
         lblIncorrect.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         lblIncorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        lblCorrectLabel.textColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        lblCorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 0.0, alpha: 1.0)
         
         
+        playCorrectSound()  
         printCorrectIncorrect()
     
     }
@@ -971,6 +983,25 @@ class ViewController: UIViewController {
         lblCorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
     }
+    
+    
+    func playCorrectSound(){
+        
+        AudioServicesCreateSystemSoundID(rightSoundURL!, &myRightSound)
+        // Play
+        AudioServicesPlaySystemSound(myRightSound);
+    }
+    
+    func playIncorrectSound(){
+        
+        AudioServicesCreateSystemSoundID(wrongSoundURL!, &myWrongSound)
+        // Play
+        AudioServicesPlaySystemSound(myWrongSound);
+        
+    }
+    
+    
+    
     
     
 }
