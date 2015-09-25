@@ -14,10 +14,24 @@ class ViewController: UIViewController {
         return false
     }
 
-    @IBOutlet weak var lblQuestion: UILabel!
+
     @IBOutlet weak var lblCorrect: UILabel!
     @IBOutlet weak var lblIncorrect: UILabel!
     @IBOutlet weak var lblCorrectIncorrect: UILabel!
+
+    @IBOutlet weak var lblFirstNumber: UILabel!
+    @IBOutlet weak var lblSecondNumber: UILabel!
+    @IBOutlet weak var lblAnswer: UILabel!
+    @IBOutlet weak var lblEquation: UILabel!
+    
+    
+    @IBOutlet weak var lblCorrectLabel: UILabel!
+    @IBOutlet weak var lblIncorrectLabel: UILabel!
+    
+    
+    @IBOutlet weak var lblUnknown1: UILabel!
+    @IBOutlet weak var lblUnknown2: UILabel!
+    @IBOutlet weak var lblUnknown3: UILabel!
     
     @IBOutlet weak var btnAnswer0: UIButton!
     @IBOutlet weak var btnAnswer1: UIButton!
@@ -46,6 +60,8 @@ class ViewController: UIViewController {
     var algebraMultiplyQuestion : Int = 0
     
     var remainder : Int = 0
+    
+    var buttoncolors : Int = 0
     
     
     
@@ -129,7 +145,11 @@ class ViewController: UIViewController {
         lblIncorrect.text = "0"
         lblCorrect.text = "0"
         lblCorrectIncorrect.text = ""
+        totalCorrect = 0
+        totalIncorrect = 0
+        textColorReset()
         randomizeTheMathGame()
+        
         
         
     }
@@ -199,6 +219,10 @@ class ViewController: UIViewController {
             
         }
         
+        randombuttoncolors()
+
+        
+        
 
         
     }
@@ -264,6 +288,15 @@ class ViewController: UIViewController {
             correctIncorrect = "Not even close!"
         }
         
+        lblIncorrect.textColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        
+        lblCorrect.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        lblIncorrectLabel.textColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        
+        lblCorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        
         printCorrectIncorrect()
         
     }
@@ -298,6 +331,16 @@ class ViewController: UIViewController {
             correctIncorrect = "Are you cheating?"
         }
     
+        
+        lblCorrect.textColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        
+        lblIncorrect.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        lblIncorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        lblCorrectLabel.textColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+        
+        
         printCorrectIncorrect()
     
     }
@@ -317,7 +360,7 @@ class ViewController: UIViewController {
         
         randomNumberCheck()
         
-        printSimpleAddButtons()
+        printAnswerButtons()
         
         printSimpleAddQuestion()
         
@@ -327,13 +370,20 @@ class ViewController: UIViewController {
     
     func printSimpleAddQuestion (){
         
-        lblQuestion.text = "\(firstNumber) + \(secondNumber) = ?"
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = "\(secondNumber)"
+        lblAnswer.text = ""
+        lblUnknown1.text = ""
+        lblUnknown2.text = ""
+        lblUnknown3.text = "?"
+        lblEquation.text = "+"
+        
         
         
     }
     
     
-    func printSimpleAddButtons(){
+    func printAnswerButtons(){
         
         if correctAnswer == 0 {
             btnAnswer0.setTitle("\(answer)", forState: UIControlState.Normal)
@@ -396,23 +446,35 @@ class ViewController: UIViewController {
             printAlgebraAddQuestion2()
         }
         
-        printAlgebraAddButtons()
+        printSecondNumberButtons()
         
         
     }
     
     func printAlgebraAddQuestion1(){
         
-        lblQuestion.text = "\(firstNumber) + ? = \(answer)"
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = ""
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = ""
+        lblUnknown2.text = "?"
+        lblUnknown3.text = ""
+        lblEquation.text = "+"
     }
     
     func printAlgebraAddQuestion2(){
         
-        lblQuestion.text = "? + \(firstNumber) = \(answer)"
+        lblFirstNumber.text = ""
+        lblSecondNumber.text = "\(firstNumber)"
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = "?"
+        lblUnknown2.text = ""
+        lblUnknown3.text = ""
+        lblEquation.text = "+"
     }
     
     
-    func printAlgebraAddButtons(){
+    func printSecondNumberButtons(){
         
         if correctAnswer == 0 {
             btnAnswer0.setTitle("\(secondNumber)", forState: UIControlState.Normal)
@@ -473,53 +535,24 @@ class ViewController: UIViewController {
         
         printSimpleSubtractQuestion()
         
-        printSimpleSubtractButtons()
+        printAnswerButtons()
         
         
     }
     
     func printSimpleSubtractQuestion (){
         
-        lblQuestion.text = "\(firstNumber) - \(secondNumber) = ?"
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = "\(secondNumber)"
+        lblAnswer.text = ""
+        lblUnknown1.text = ""
+        lblUnknown2.text = ""
+        lblUnknown3.text = "?"
+        lblEquation.text = "-"
         
     }
     
-    func printSimpleSubtractButtons(){
-        
-        if correctAnswer == 0 {
-            btnAnswer0.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 1 {
-            btnAnswer0.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 2 {
-            btnAnswer0.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 3 {
-            btnAnswer0.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(answer)", forState: UIControlState.Normal)
-            
-        }
-        
-        
-    }
+
     
     func algebraSubtract1(){
         
@@ -541,7 +574,7 @@ class ViewController: UIViewController {
         
         randomNumberCheck()
         
-        printAlgebraSubtract1Buttons()
+        printSecondNumberButtons()
         
         printAlgebraSubtract1Question()
         
@@ -550,44 +583,13 @@ class ViewController: UIViewController {
     
     func printAlgebraSubtract1Question (){
         
-        lblQuestion.text = "\(firstNumber) - ? = \(answer)"
-        
-    }
-    
-    func printAlgebraSubtract1Buttons(){
-        
-        if correctAnswer == 0 {
-            btnAnswer0.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 1 {
-            btnAnswer0.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 2 {
-            btnAnswer0.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 3 {
-            btnAnswer0.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            
-        }
-        
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = ""
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = ""
+        lblUnknown2.text = "?"
+        lblUnknown3.text = ""
+        lblEquation.text = "-"
         
     }
     
@@ -612,7 +614,7 @@ class ViewController: UIViewController {
         
         randomNumberCheck()
         
-        printAlgebraSubtract2Buttons()
+        printFirstNumberButtons()
         
         printAlgebraSubtract2Question()
         
@@ -621,11 +623,17 @@ class ViewController: UIViewController {
     
     func printAlgebraSubtract2Question (){
         
-        lblQuestion.text = "? - \(secondNumber) = \(answer)"
+        lblFirstNumber.text = ""
+        lblSecondNumber.text = "\(secondNumber)"
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = "?"
+        lblUnknown2.text = ""
+        lblUnknown3.text = ""
+        lblEquation.text = "-"
         
     }
     
-    func printAlgebraSubtract2Buttons(){
+    func printFirstNumberButtons(){
         
         if correctAnswer == 0 {
             btnAnswer0.setTitle("\(firstNumber)", forState: UIControlState.Normal)
@@ -681,54 +689,24 @@ class ViewController: UIViewController {
         
         printSimpleMultiplyQuestion()
         
-        printSimpleMultiplyButtons()
+        printAnswerButtons()
         
         
     }
     
     func printSimpleMultiplyQuestion (){
         
-        lblQuestion.text = "\(firstNumber) x \(secondNumber) = ?"
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = "\(secondNumber)"
+        lblAnswer.text = ""
+        lblUnknown1.text = ""
+        lblUnknown2.text = ""
+        lblUnknown3.text = "?"
+        lblEquation.text = "x"
         
     }
     
-    func printSimpleMultiplyButtons(){
-        
-        if correctAnswer == 0 {
-            btnAnswer0.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 1 {
-            btnAnswer0.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 2 {
-            btnAnswer0.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 3 {
-            btnAnswer0.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(answer)", forState: UIControlState.Normal)
-            
-        }
-        
-        
-    }
-    
+
     func algebraMultiply(){
         
         firstNumber = Int(arc4random_uniform(20))
@@ -758,57 +736,31 @@ class ViewController: UIViewController {
             printAlgebraMultiplyQuestion2()
         }
         
-        printAlgebraMultiplyButtons()
+        printSecondNumberButtons()
         
         
     }
     
     func printAlgebraMultiplyQuestion1(){
         
-        lblQuestion.text = "\(firstNumber) x ? = \(answer)"
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = ""
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = ""
+        lblUnknown2.text = "?"
+        lblUnknown3.text = ""
+        lblEquation.text = "x"
     }
     
     func printAlgebraMultiplyQuestion2(){
         
-        lblQuestion.text = "? x \(firstNumber) = \(answer)"
-    }
-    
-    
-    func printAlgebraMultiplyButtons(){
-        
-        if correctAnswer == 0 {
-            btnAnswer0.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 1 {
-            btnAnswer0.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 2 {
-            btnAnswer0.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 3 {
-            btnAnswer0.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            
-        }
-        
-        
+        lblFirstNumber.text = ""
+        lblSecondNumber.text = "\(firstNumber)"
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = "?"
+        lblUnknown2.text = ""
+        lblUnknown3.text = ""
+        lblEquation.text = "x"
     }
     
 
@@ -817,6 +769,8 @@ class ViewController: UIViewController {
         
         firstNumber = Int(arc4random_uniform(401))
         secondNumber = Int(arc4random_uniform(51))
+        
+        secondNumber = secondNumber + 1
         
         remainder = firstNumber % secondNumber
         
@@ -827,6 +781,7 @@ class ViewController: UIViewController {
             simpleDivide()
             
         }
+        
     
         answer = firstNumber / secondNumber
 
@@ -839,7 +794,7 @@ class ViewController: UIViewController {
         
         printSimpleDivideQuestion()
         
-        printSimpleDivideButtons()
+        printAnswerButtons()
         
         
 
@@ -847,44 +802,13 @@ class ViewController: UIViewController {
     
     func printSimpleDivideQuestion (){
         
-        lblQuestion.text = "\(firstNumber) ÷ \(secondNumber) = ?"
-        
-    }
-    
-    func printSimpleDivideButtons(){
-        
-        if correctAnswer == 0 {
-            btnAnswer0.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 1 {
-            btnAnswer0.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 2 {
-            btnAnswer0.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(answer)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 3 {
-            btnAnswer0.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(answer)", forState: UIControlState.Normal)
-            
-        }
-        
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = "\(secondNumber)"
+        lblAnswer.text = ""
+        lblUnknown1.text = ""
+        lblUnknown2.text = ""
+        lblUnknown3.text = "?"
+        lblEquation.text = "÷"
         
     }
     
@@ -895,6 +819,8 @@ class ViewController: UIViewController {
         firstNumber = Int(arc4random_uniform(401))
         secondNumber = Int(arc4random_uniform(51))
         
+        secondNumber = secondNumber + 1
+        
         remainder = firstNumber % secondNumber
         
         firstNumber = firstNumber - remainder
@@ -904,6 +830,7 @@ class ViewController: UIViewController {
             algebraDivide1()
             
         }
+    
         
         answer = firstNumber / secondNumber
         
@@ -916,7 +843,7 @@ class ViewController: UIViewController {
         
        
         printAlgebraDivide1Question()
-        printAlgebraDivide1Buttons()
+        printSecondNumberButtons()
         
         
         
@@ -924,52 +851,24 @@ class ViewController: UIViewController {
     
     func printAlgebraDivide1Question(){
         
-        lblQuestion.text = "\(firstNumber) ÷ ? = \(answer)"
+        lblFirstNumber.text = "\(firstNumber)"
+        lblSecondNumber.text = ""
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = ""
+        lblUnknown2.text = "?"
+        lblUnknown3.text = ""
+        lblEquation.text = "÷"
         
     }
     
-    func printAlgebraDivide1Buttons(){
-        
-        if correctAnswer == 0 {
-            btnAnswer0.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 1 {
-            btnAnswer0.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 2 {
-            btnAnswer0.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
-        
-        if correctAnswer == 3 {
-            btnAnswer0.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(secondNumber)", forState: UIControlState.Normal)
-            
-        }
-        
-        
-    }
     
     func algebraDivide2(){
         
         
         firstNumber = Int(arc4random_uniform(401))
         secondNumber = Int(arc4random_uniform(51))
+        
+        secondNumber = secondNumber + 1
         
         remainder = firstNumber % secondNumber
         
@@ -992,7 +891,9 @@ class ViewController: UIViewController {
         
         
         printAlgebraDivide2Question()
-        printAlgebraDivide2Buttons()
+        printFirstNumberButtons()
+            
+        
         
         
         
@@ -1000,86 +901,77 @@ class ViewController: UIViewController {
     
     func printAlgebraDivide2Question(){
         
-        lblQuestion.text = "? ÷ \(secondNumber) = \(answer)"
+        lblFirstNumber.text = ""
+        lblSecondNumber.text = "\(secondNumber)"
+        lblAnswer.text = "\(answer)"
+        lblUnknown1.text = "?"
+        lblUnknown2.text = ""
+        lblUnknown3.text = ""
+        lblEquation.text = "÷"
         
     }
     
-    func printAlgebraDivide2Buttons(){
+    
+    func randombuttoncolors(){
         
-        if correctAnswer == 0 {
-            btnAnswer0.setTitle("\(firstNumber)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
+        buttoncolors = Int(arc4random_uniform(4))
+        
+        if buttoncolors == 0 {
+        
+            btnAnswer0.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer1.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer2.backgroundColor = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
+            btnAnswer3.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)
+
+        }
+        
+        
+        if buttoncolors == 1 {
+            
+            btnAnswer1.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer2.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer3.backgroundColor = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
+            btnAnswer0.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)
             
         }
         
-        if correctAnswer == 1 {
-            btnAnswer0.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(firstNumber)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
+        if buttoncolors == 2 {
+            
+            btnAnswer2.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer3.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer0.backgroundColor = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
+            btnAnswer1.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)
             
         }
         
-        if correctAnswer == 2 {
-            btnAnswer0.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(firstNumber)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            
-        }
         
-        if correctAnswer == 3 {
-            btnAnswer0.setTitle("\(incorrectAnswer3)", forState: UIControlState.Normal)
-            btnAnswer1.setTitle("\(incorrectAnswer1)", forState: UIControlState.Normal)
-            btnAnswer2.setTitle("\(incorrectAnswer2)", forState: UIControlState.Normal)
-            btnAnswer3.setTitle("\(firstNumber)", forState: UIControlState.Normal)
+        if buttoncolors == 3 {
+            
+            btnAnswer3.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer0.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 1.0)
+            btnAnswer1.backgroundColor = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
+            btnAnswer2.backgroundColor = UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 1.0)
             
         }
+
+        
         
         
     }
-
     
     
+    func textColorReset(){
+        
+        lblCorrect.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    
+        lblIncorrect.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        lblIncorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        lblCorrectLabel.textColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+    }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-    
-    
-    
-
 }
 
