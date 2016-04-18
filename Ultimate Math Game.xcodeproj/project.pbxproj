@@ -14,8 +14,8 @@
 		73C6EC3E1BB49E1C00E7FFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C6EC3C1BB49E1C00E7FFEF /* LaunchScreen.storyboard */; };
 		73C6EC491BB49E1C00E7FFEF /* Ultimate_Math_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6EC481BB49E1C00E7FFEF /* Ultimate_Math_GameTests.swift */; };
 		73C6EC541BB49E1C00E7FFEF /* Ultimate_Math_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6EC531BB49E1C00E7FFEF /* Ultimate_Math_GameUITests.swift */; };
-		73C6EC681BB5CD4A00E7FFEF /* Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73C6EC661BB5CD4A00E7FFEF /* Right.mp3 */; settings = {ASSET_TAGS = (); }; };
-		73C6ECAA1BB5E33200E7FFEF /* Wrong1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73C6ECA91BB5E33200E7FFEF /* Wrong1.mp3 */; settings = {ASSET_TAGS = (); }; };
+		73C6EC681BB5CD4A00E7FFEF /* Right.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73C6EC661BB5CD4A00E7FFEF /* Right.mp3 */; };
+		73C6ECAA1BB5E33200E7FFEF /* Wrong1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 73C6ECA91BB5E33200E7FFEF /* Wrong1.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +198,7 @@
 				TargetAttributes = {
 					73C6EC2F1BB49E1C00E7FFEF = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = FEY5QB95HW;
 					};
 					73C6EC431BB49E1C00E7FFEF = {
 						CreatedOnToolsVersion = 7.0;
@@ -404,7 +405,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Ultimate Math Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RLDT.Ultimate-Math-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,7 +418,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Ultimate Math Game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RLDT.Ultimate-Math-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
