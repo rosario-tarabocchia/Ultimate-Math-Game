@@ -280,7 +280,7 @@ class ViewController: UIViewController {
         
         if wrongAnswerResponses == 1 {
             
-            correctIncorrect = "Man are you stupid!"
+            correctIncorrect = "You're not that smart are you?!"
         }
         
         if wrongAnswerResponses == 2 {
@@ -290,7 +290,7 @@ class ViewController: UIViewController {
         
         if wrongAnswerResponses == 3 {
             
-            correctIncorrect = "Want something easier?     What's 1 + 1?"
+            correctIncorrect = "Want something easier? What's 1 + 1?"
         }
         
         if wrongAnswerResponses == 4 {
@@ -445,6 +445,8 @@ class ViewController: UIViewController {
         incorrectAnswer1 = Int(arc4random_uniform(501))
         incorrectAnswer2 = Int(arc4random_uniform(501))
         incorrectAnswer3 = Int(arc4random_uniform(501))
+        
+        print(firstNumber, secondNumber)
         
         randomNumberCheck()
         

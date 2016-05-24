@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,48 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ultimate Math Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-ux-S59">
-                                <rect key="frame" x="20" y="20" width="374" height="65"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Ultralight" family="PingFang HK" pointSize="37"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8e-4c-k5J">
-                                <rect key="frame" x="19" y="168" width="185" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to ULTIMATE MATH QUIZ!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mfI-OZ-jgU">
+                                <rect key="frame" x="20" y="509" width="560" height="44"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Incorrect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhI-xm-n83">
-                                <rect key="frame" x="209" y="168" width="185" height="65"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7L5-C7-UH8">
-                                <rect key="frame" x="20" y="218" width="185" height="65"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfI-OZ-jgU">
-                                <rect key="frame" x="19" y="582" width="374" height="111"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhD-94-Rsx">
-                                <rect key="frame" x="19" y="686" width="375" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhD-94-Rsx">
+                                <rect key="frame" x="20" y="561" width="560" height="24"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="15"/>
                                 <state key="normal" title="RESET">
@@ -67,36 +38,36 @@
                                     <action selector="btnResetACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipl-Sy-Lra"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyp-hQ-cUQ">
-                                <rect key="frame" x="20" y="294" width="183" height="141"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyp-hQ-cUQ" userLabel="Orange Label">
+                                <rect key="frame" x="11" y="224" width="279" height="135"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-lx-cMq">
-                                <rect key="frame" x="20" y="443" width="183" height="141"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eU-lx-cMq" userLabel="Pink Label">
+                                <rect key="frame" x="10" y="369" width="279" height="135"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mh-wd-59v">
-                                <rect key="frame" x="211" y="294" width="183" height="141"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Mh-wd-59v" userLabel="Blue Label">
+                                <rect key="frame" x="310" y="224" width="279" height="135"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8v-bL-BR0">
-                                <rect key="frame" x="211" y="443" width="183" height="141"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8v-bL-BR0" userLabel="Green Label">
+                                <rect key="frame" x="310" y="369" width="279" height="135"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCf-81-Ugo">
-                                <rect key="frame" x="28" y="302" width="168" height="126"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCf-81-Ugo">
+                                <rect key="frame" x="25" y="231" width="251" height="121.5"/>
                                 <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="60"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -108,34 +79,8 @@
                                     <action selector="btnAnswer0ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCg-Rc-VNe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-rO-bpT">
-                                <rect key="frame" x="218" y="302" width="168" height="126"/>
-                                <color key="backgroundColor" red="0.0" green="0.0097165578945137554" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="60"/>
-                                <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="000">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnAnswer1ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwf-kh-0Ab"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03O-n1-Y4H">
-                                <rect key="frame" x="218" y="451" width="168" height="126"/>
-                                <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="60"/>
-                                <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="000">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnAnswer3ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFK-Na-0O9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdT-ga-WpX">
-                                <rect key="frame" x="28" y="451" width="168" height="126"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdT-ga-WpX">
+                                <rect key="frame" x="24" y="375" width="251" height="122"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="60"/>
                                 <size key="titleShadowOffset" width="0.0" height="1"/>
@@ -147,82 +92,233 @@
                                     <action selector="btnAnswer2ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTg-Sh-rad"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmY-3c-aGJ">
-                                <rect key="frame" x="19" y="88" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03O-n1-Y4H">
+                                <rect key="frame" x="324" y="376" width="251" height="122"/>
+                                <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="60"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="000">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnswer3ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fFK-Na-0O9"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OVI-hf-6IJ" userLabel="Equation">
+                                <rect key="frame" x="20" y="73" width="560" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="gmY-3c-aGJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6m1-ed-hDz">
+                                        <rect key="frame" x="125" y="0.0" width="36.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PjT-xb-yCy">
+                                        <rect key="frame" x="161.5" y="0.0" width="33.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="gIL-22-dp0">
+                                        <rect key="frame" x="195" y="0.0" width="125" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="by0-zm-cF9">
+                                        <rect key="frame" x="320" y="0.0" width="36" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-OY-Mm2">
+                                        <rect key="frame" x="356" y="0.0" width="42.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="888" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="dfQ-Fu-f5H">
+                                        <rect key="frame" x="398.5" y="0.0" width="125.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KLm-r8-ymn">
+                                        <rect key="frame" x="524" y="0.0" width="36" height="60"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ultimate Math Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-ux-S59">
+                                <rect key="frame" x="20" y="20" width="560" height="48"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Ultralight" family="PingFang HK" pointSize="37"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIL-22-dp0">
-                                <rect key="frame" x="153" y="88" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfQ-Fu-f5H">
-                                <rect key="frame" x="285" y="88" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjT-xb-yCy">
-                                <rect key="frame" x="86" y="87" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="45"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-OY-Mm2">
-                                <rect key="frame" x="219" y="87" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="43"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLm-r8-ymn">
-                                <rect key="frame" x="285" y="88" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="by0-zm-cF9">
-                                <rect key="frame" x="152" y="88" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m1-ed-hDz">
-                                <rect key="frame" x="19" y="88" width="108" height="90"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="2"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlt-2q-pYR">
-                                <rect key="frame" x="208" y="218" width="185" height="65"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qOy-gN-m9l">
+                                <rect key="frame" x="20" y="141" width="560" height="78"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="j8e-4c-k5J">
+                                        <rect key="frame" x="0.0" y="0.0" width="200.5" height="78"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="7L5-C7-UH8">
+                                        <rect key="frame" x="205.5" y="0.0" width="35" height="78"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq2-LB-0kC">
+                                        <rect key="frame" x="245.5" y="0.0" width="27.5" height="78"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nlt-2q-pYR">
+                                        <rect key="frame" x="278" y="0.0" width="35" height="78"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vhI-xm-n83">
+                                        <rect key="frame" x="318" y="0.0" width="242" height="78"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="OTF-Dz-AgX"/>
+                                            <constraint firstAttribute="width" constant="159" id="Tpg-um-qag"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="shadowOffset" width="0.0" height="2"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="OTF-Dz-AgX"/>
+                                                <exclude reference="Tpg-um-qag"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGB-rO-bpT">
+                                <rect key="frame" x="324" y="231" width="251" height="121"/>
+                                <color key="backgroundColor" red="0.0" green="0.0078431372549019607" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Thin" family="PingFang HK" pointSize="60"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="000">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnswer1ACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwf-kh-0Ab"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mGB-rO-bpT" firstAttribute="width" secondItem="2Mh-wd-59v" secondAttribute="width" multiplier="0.9" id="0e1-Sy-ovg"/>
+                            <constraint firstItem="YdT-ga-WpX" firstAttribute="centerX" secondItem="4eU-lx-cMq" secondAttribute="centerX" id="1Bx-36-MAr"/>
+                            <constraint firstItem="OVI-hf-6IJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7FL-G8-1bo"/>
+                            <constraint firstItem="lhD-94-Rsx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AYu-ZX-lSJ"/>
+                            <constraint firstItem="6qr-ux-S59" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AoF-vJ-ktv"/>
+                            <constraint firstItem="zCf-81-Ugo" firstAttribute="centerX" secondItem="Dyp-hQ-cUQ" secondAttribute="centerX" id="B3i-hx-3eC"/>
+                            <constraint firstItem="z8v-bL-BR0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="Bgc-Jm-PsT"/>
+                            <constraint firstItem="4eU-lx-cMq" firstAttribute="width" secondItem="Dyp-hQ-cUQ" secondAttribute="width" id="CTu-BM-1rl"/>
+                            <constraint firstItem="zCf-81-Ugo" firstAttribute="centerY" secondItem="Dyp-hQ-cUQ" secondAttribute="centerY" id="CvG-Ex-VwT"/>
+                            <constraint firstItem="2Mh-wd-59v" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.465" id="CwL-8X-Wqf"/>
+                            <constraint firstItem="OVI-hf-6IJ" firstAttribute="top" secondItem="6qr-ux-S59" secondAttribute="bottom" constant="5" id="Duw-dt-17h"/>
+                            <constraint firstItem="2Mh-wd-59v" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.225" id="F1Q-Hj-Xdm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qOy-gN-m9l" secondAttribute="trailing" id="Faw-is-qUP"/>
+                            <constraint firstItem="2Mh-wd-59v" firstAttribute="top" secondItem="qOy-gN-m9l" secondAttribute="bottom" constant="5" id="Fv2-Kt-gqo"/>
+                            <constraint firstItem="lhD-94-Rsx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.04" id="HFd-uJ-pMH"/>
+                            <constraint firstItem="qOy-gN-m9l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IzS-av-Lvv"/>
+                            <constraint firstItem="mfI-OZ-jgU" firstAttribute="top" secondItem="z8v-bL-BR0" secondAttribute="bottom" constant="5" id="LSf-Xg-1WY"/>
+                            <constraint firstItem="zCf-81-Ugo" firstAttribute="height" secondItem="Dyp-hQ-cUQ" secondAttribute="height" multiplier="0.9" id="MS4-nk-cOt"/>
+                            <constraint firstItem="z8v-bL-BR0" firstAttribute="height" secondItem="2Mh-wd-59v" secondAttribute="height" id="NML-QD-lFu"/>
+                            <constraint firstItem="6qr-ux-S59" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Nln-gE-5Jk"/>
+                            <constraint firstItem="YdT-ga-WpX" firstAttribute="width" secondItem="4eU-lx-cMq" secondAttribute="width" multiplier="0.9" id="QU0-3j-ngz"/>
+                            <constraint firstItem="Dyp-hQ-cUQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.225" id="RYP-Z9-Cjg"/>
+                            <constraint firstItem="mfI-OZ-jgU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tdx-91-2Pe"/>
+                            <constraint firstItem="Dyp-hQ-cUQ" firstAttribute="top" secondItem="qOy-gN-m9l" secondAttribute="bottom" constant="5" id="UfE-Kl-tpm"/>
+                            <constraint firstItem="03O-n1-Y4H" firstAttribute="height" secondItem="z8v-bL-BR0" secondAttribute="height" multiplier="0.9" id="V1z-TM-s0M"/>
+                            <constraint firstItem="4eU-lx-cMq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="VKK-6q-P17"/>
+                            <constraint firstItem="qOy-gN-m9l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WBw-Nb-Qp6"/>
+                            <constraint firstItem="YdT-ga-WpX" firstAttribute="height" secondItem="4eU-lx-cMq" secondAttribute="height" multiplier="0.9" id="ZVE-sC-OTm"/>
+                            <constraint firstItem="Dyp-hQ-cUQ" firstAttribute="top" secondItem="OVI-hf-6IJ" secondAttribute="bottom" constant="10" id="akD-Wg-kbo"/>
+                            <constraint firstItem="OVI-hf-6IJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="apa-Z0-14Q"/>
+                            <constraint firstItem="z8v-bL-BR0" firstAttribute="width" secondItem="2Mh-wd-59v" secondAttribute="width" id="cge-tU-k9X"/>
+                            <constraint firstItem="qOy-gN-m9l" firstAttribute="top" secondItem="z8v-bL-BR0" secondAttribute="bottom" constant="5" id="cgk-Ll-isO"/>
+                            <constraint firstItem="6qr-ux-S59" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eXg-K1-rD5"/>
+                            <constraint firstItem="2Mh-wd-59v" firstAttribute="top" secondItem="OVI-hf-6IJ" secondAttribute="bottom" constant="10" id="gP1-MM-QgD"/>
+                            <constraint firstItem="qOy-gN-m9l" firstAttribute="top" secondItem="OVI-hf-6IJ" secondAttribute="bottom" constant="8" id="gcW-qd-SUv"/>
+                            <constraint firstItem="YdT-ga-WpX" firstAttribute="centerY" secondItem="4eU-lx-cMq" secondAttribute="centerY" id="hEX-B3-Pp1"/>
+                            <constraint firstItem="zCf-81-Ugo" firstAttribute="width" secondItem="Dyp-hQ-cUQ" secondAttribute="width" multiplier="0.9" id="hvR-T5-npa"/>
+                            <constraint firstItem="6qr-ux-S59" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="j3g-i2-MDc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OVI-hf-6IJ" secondAttribute="trailing" id="jDl-2c-xbT"/>
+                            <constraint firstItem="lhD-94-Rsx" firstAttribute="top" secondItem="mfI-OZ-jgU" secondAttribute="bottom" constant="8" id="kYg-7U-Vqd"/>
+                            <constraint firstItem="lhD-94-Rsx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lH1-x2-fP6"/>
+                            <constraint firstItem="mfI-OZ-jgU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nmb-4f-mIV"/>
+                            <constraint firstItem="03O-n1-Y4H" firstAttribute="centerY" secondItem="z8v-bL-BR0" secondAttribute="centerY" id="oLE-HZ-lFs"/>
+                            <constraint firstItem="mfI-OZ-jgU" firstAttribute="top" secondItem="qOy-gN-m9l" secondAttribute="bottom" constant="8" id="pyW-iD-uWj"/>
+                            <constraint firstItem="mGB-rO-bpT" firstAttribute="height" secondItem="2Mh-wd-59v" secondAttribute="height" multiplier="0.9" id="qZY-S1-xWB"/>
+                            <constraint firstItem="4eU-lx-cMq" firstAttribute="height" secondItem="Dyp-hQ-cUQ" secondAttribute="height" id="qc8-tw-xzZ"/>
+                            <constraint firstItem="mGB-rO-bpT" firstAttribute="centerY" secondItem="2Mh-wd-59v" secondAttribute="centerY" id="s0K-yd-Dko"/>
+                            <constraint firstItem="03O-n1-Y4H" firstAttribute="centerX" secondItem="z8v-bL-BR0" secondAttribute="centerX" id="sZh-S1-Wu7"/>
+                            <constraint firstItem="Dyp-hQ-cUQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="vKi-BM-ntc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lhD-94-Rsx" secondAttribute="bottom" constant="15" id="vUt-LT-sbD"/>
+                            <constraint firstItem="2Mh-wd-59v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="vwb-K4-Z7H"/>
+                            <constraint firstItem="mGB-rO-bpT" firstAttribute="centerX" secondItem="2Mh-wd-59v" secondAttribute="centerX" id="w9G-UC-LBD"/>
+                            <constraint firstItem="Dyp-hQ-cUQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.465" id="wOy-nJ-kn3"/>
+                            <constraint firstItem="z8v-bL-BR0" firstAttribute="top" secondItem="2Mh-wd-59v" secondAttribute="bottom" constant="10" id="wb1-QI-ATt"/>
+                            <constraint firstItem="03O-n1-Y4H" firstAttribute="width" secondItem="z8v-bL-BR0" secondAttribute="width" multiplier="0.9" id="y3W-4U-Gfu"/>
+                            <constraint firstItem="4eU-lx-cMq" firstAttribute="top" secondItem="Dyp-hQ-cUQ" secondAttribute="bottom" constant="10" id="yCn-IX-hQa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cgk-Ll-isO"/>
+                                <exclude reference="akD-Wg-kbo"/>
+                                <exclude reference="gP1-MM-QgD"/>
+                                <exclude reference="pyW-iD-uWj"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="btnAnswer0" destination="zCf-81-Ugo" id="IUN-Bc-TMm"/>
                         <outlet property="btnAnswer1" destination="mGB-rO-bpT" id="z6q-78-oks"/>
@@ -252,7 +348,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="245" y="326"/>
+            <point key="canvasLocation" x="120" y="336"/>
         </scene>
     </scenes>
 </document>
